@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐉 Dragón Dorado - Chat con IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .chat-header {
+            background-color: #d4af37;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .chat-messages {
+            height: 500px;
+            overflow-y: auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+        }
+        
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.8rem 1rem;
+            border-radius: 18px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .bot-message {
+            background-color: #ffffff;
+            border: 1px solid #eee;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chat-input button {
+            margin-left: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .chat-input button:hover {
+            background-color: #c19b2e;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">🐉 Dragón Dorado</h1>
+        <nav class="nav">
+            <button class="hamburger">☰</button>
+            <ul class="nav-list">
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="menu.html">Menús</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="chat.html">Chat IA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Chat con nuestra IA</h2>
+                <p>Pregunta lo que necesites sobre nuestro restaurante</p>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensajes se añadirán aquí dinámicamente -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 +34 123 456 789</p>
+                <p>📧 info@dragondorado.com</p>
+                <p>📍 Calle del Dragón, 88, Madrid</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes - Viernes: 12:00 - 23:30</p>
+                <p>Sábado - Domingo: 11:30 - 00:00</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2023 🐉 Dragón Dorado - Sabores ancestrales de China</p>
+        </div>
+    </footer>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
