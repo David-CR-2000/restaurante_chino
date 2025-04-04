@@ -16,8 +16,9 @@
             <ul class="nav-list">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="contact.html">Contacto</a></li>
                 <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="chat.html">Chat IA</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +52,7 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                <button type="submit" class="submit-btn" id="contact-submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
@@ -88,5 +89,27 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Manejar el envío del formulario de contacto
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener los valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Aquí se podría enviar los datos a un servidor
+            console.log('Formulario enviado:', { name, email, phone, subject, message });
+            
+            // Mostrar mensaje de confirmación
+            alert(`Gracias ${name} por tu mensaje. Te contactaremos pronto.`);
+            
+            // Limpiar el formulario
+            this.reset();
+        });
+    </script>
 </body>
 </html>

@@ -17,7 +17,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
                 <li><a href="contact.html">Contacto</a></li>
-                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="chat.html">Chat IA</a></li>
             </ul>
         </nav>
     </header>
@@ -99,5 +100,28 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Manejar el envío del formulario de reservas
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener los valores del formulario
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const people = document.getElementById('people').value;
+            const comments = document.getElementById('comments').value;
+            
+            // Aquí se podría enviar los datos a un servidor
+            console.log('Reserva enviada:', { name, phone, date, time, people, comments });
+            
+            // Mostrar mensaje de confirmación
+            alert(`Gracias ${name} por tu reserva para el ${date} a las ${time}. Te esperamos.`);
+            
+            // Limpiar el formulario
+            this.reset();
+        });
+    </script>
 </body>
 </html>
